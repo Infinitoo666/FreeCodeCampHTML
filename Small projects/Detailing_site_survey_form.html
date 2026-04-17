@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <header>
+        <h1 id="title">Help me improve my detailing skills</h1>
+        <p id="description">Thanks for trusting me with ur car. I want the best for you, so I am asking you to complete the survey to improve future services. Thanks! </p>
+    </header>
+    <form id="survey-form">
+        <fieldset id="personal-information">
+            <legend>Personal information</legend>
+            <label for="name" id="name-label">Name:</label>
+            <input id="name" type="text" placeholder="John Smith" required>
+            <label for="email" id="email-label">Email:</label>
+            <input id="email" type="email" placeholder="example@email.com" required>
+            <label for="number" id="number-label">Age:</label>
+            <input id="number" type="number" placeholder="9-99" required min="9" max="99">
+            <label for="tel">Phone number:</label>
+            <input id="tel" type="tel" placeholder="123456789" pattern="[0-9]{9}" required>
+            <label for="dropdown">Rating of service</label>
+            <select name="survey-rating" id="dropdown" >
+                <option value="poor">Poor</option>
+                <option value="mid">Mid</option>
+                <option value="great">Great</option>
+                <option selected value="Excellent">Excellent</option>
+            </select>
+        </fieldset>
+        <fieldset id="rating-of-service">
+            <legend>What did you like most about the service?</legend>
+            <input type="checkbox" name="service-survey" id="survey-price" value="price">
+            <label for="survey-price">Price</label>
+            <input type="checkbox" name="service-survey" id="survey-details" value="attention to details">
+            <label for="survey-details">Attention to details</label>
+            <input type="checkbox" name="service-survey" id="survey-time" value="job time">
+            <label for="survey-time">Job time</label>
+            <input type="checkbox" name="service-survey" id="survey-contact" value="easy contact">
+            <label for="survey-contact">Easy contact</label>
+        </fieldset>
+        <fieldset id="question-first-service">
+            <legend>Was this your first time using my services?</legend>
+            <input type="radio" name="first-time" value="yes-option" id="yes-option">
+            <label for="yes-option">Yes</label>
+            <input type="radio" name="first-time" value="no-option" id="no-option">
+            <label for="no-option">No</label>
+        </fieldset>
+        <fieldset id="text-opinion">
+        <label for="textarea">Leave your opinion here!</label>
+        <textarea id="textarea" name="comments" cols="40" rows="5"></textarea>
+        </fieldset>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+  </body>
+</html>
